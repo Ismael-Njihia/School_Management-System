@@ -45,3 +45,96 @@ a {
     width: 90%;
     margin-left: 10px;
 }
+
+
+/*home page*/
+
+.img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.home {
+    display: flex;
+}
+
+.left {
+    height: 100vh;
+    width: 20%;
+    border-top: 1px solid gainsboro;
+}
+
+.right {
+    height: 100vh;
+    width: 80%;
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+.navigation a {
+    padding-left: 15px;
+}
+
+.navigation a:hover {
+    background-color: gainsboro;
+}
+
+.settings {
+    margin-top: 5px;
+    padding: 10px;
+    border-top: 1px gainsboro;
+    display: flex;
+    justify-content: space-around;
+}
+
+.right h1 {
+    text-align: center;
+}
+
+.settings label {
+    margin-top: 10px;
+}
+
+.card2 {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: gainsboro;
+    margin-left: 20px;
+}
+
+.card3 {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: gainsboro;
+    margin-right: 50px;
+}
+
+.card3 input,
+label,
+button,
+a,
+select {
+    width: 90%;
+    margin-left: 10px;
+}
+
+.card2 input,
+label,
+button,
+a,
+select {
+    width: 90%;
+    margin-left: 10px;
+}
+
+.selectOption {
+    margin-top: 20px;
+    width: 90%;
+    margin-left: 10px;
+}
