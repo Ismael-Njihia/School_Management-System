@@ -28,18 +28,7 @@ firebase.auth().onAuthStateChanged((user) => {
                 window.location.reload();
             })
         }
-        firebase.firestore().collection("classDetails").get().then((virtualStore) => {
-            let content = "";
-            virtualStore.forEach((doc) => {
-                classIn: doc.data().classIn;
-                studentsNo: doc.data().studentsNo;
-                classDetails: doc.data().classDetails;
 
-                content += '<h3> +studentsNo +</h3>'
-
-            })
-            $("#NoStudents").append(content);
-        })
 
     } else {
         window.location.href = "/School_Management-System/index.html"
