@@ -82,18 +82,17 @@
                     <div class="card2">
 
                         <label class="form-label" for="">Your class</label>
-                        <input id="StudentsNo" class="form-control" type="text" placeholder="eg: class 7">
+                        <input id="classIn" class="form-control" type="text" placeholder="eg: class 7">
                         <br>
                         <label class="form-label" for="">Students In your class: </label>
-                        <input id="StudentsNo" class="form-control" type="text" placeholder="">
+                        <input id="studentsNo" class="form-control" type="text" placeholder="">
                         <br>
 
-                        <button id="login" class="btn btn-primary">Save</button>
+                        <button id="ClassDetails" class="btn btn-primary">Save</button>
                     </div>
                     <div class="card3">
-                        <select class="form-select selectOption" aria-label="Default select example">
-                            <option selected>The Exam You are Marking</option>
-                            <option value="">Opener Exam</option>
+                        <select class="form-select selectOption" id="selectOption" aria-label="Default select example">
+                            <option selected>Opener Exam</option>
                             <option value="">Mid-term Exam </option>
                             <option value="">End term Exam</option>
                             <option value="">Just a school Exam</option>
@@ -103,7 +102,7 @@
                         <input id="yearInput" class="form-control" type="date" placeholder="current year">
                         <br>
 
-                        <button id="login" class="btn btn-primary">Save</button>
+                        <button id="ExamDetails" class="btn btn-primary">Save</button>
 
                     </div>
                 </div>
@@ -121,8 +120,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
 
-    <script src="js/config.js"></script>
-    <script src="js/settings.js"></script>
+    <script src="/School_Management-System/Js/config.js"></script>
+    <script src="/School_Management-System/Js/settings.js"></script>
 </body>
 
 </html>
