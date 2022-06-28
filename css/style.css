@@ -182,3 +182,13 @@ h6 {
     margin-top: 0;
     margin-bottom: 20px;
 }
+
+.Modalbtn button {
+    width: fit-content;
+    overflow: hidden;
+    justify-content: space-around;
+}
+
+.modalFull {
+    background-color: gainsboro;
+}

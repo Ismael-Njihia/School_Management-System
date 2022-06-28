@@ -15,16 +15,31 @@ firebase.auth().onAuthStateChanged((user) => {
         })
         firebase.firestore().collection("ExamDetails").get().then((querySnapshot) => {
 
+                querySnapshot.forEach((doc) => {
+                    let selectOption = doc.data().selectOption;
+                    let yearInput = doc.data().yearInput;
+                    let docId = doc.data.ExamDetails;
+
+                    document.getElementById("typeOfExam").innerText = selectOption;
+                    document.getElementById("examDone").innerText = "Exam done in" + " " + yearInput;
+
+
+                })
+            })
+            //pull all users and show them
+        firebase.firestore().collection("users").get().then((querySnapshot) => {
+            let userDetails = '';
             querySnapshot.forEach((doc) => {
-                let selectOption = doc.data().selectOption;
-                let yearInput = doc.data().yearInput;
-                let docId = doc.data.ExamDetails;
+                let userName = doc.data().userName;
+                let userType = doc.data().userType
 
-                document.getElementById("typeOfExam").innerText = selectOption;
-                document.getElementById("examDone").innerText = "Exam done in" + " " + yearInput;
-
+                userDetails += '<div>';
+                userDetails += '<h4>' + userName + '</h4>';
+                userDetails += '<p>' + userType + '</p>';
+                userDetails += '</div>';
 
             })
+            $("#allusers").append(userDetails);
         })
 
     } else {

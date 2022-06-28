@@ -1,5 +1,8 @@
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
+        //get the logged in user Id
+        let UserId = user.uid;
+        console.log(UserId)
         document.getElementById("ClassDetails").onclick = function() {
             let classIn = document.getElementById("classIn").value;
             let studentsNo = document.getElementById("studentsNo").value;
@@ -9,6 +12,7 @@ firebase.auth().onAuthStateChanged((user) => {
             classDetails.set({
                 classIn: classIn,
                 studentsNo: studentsNo,
+                UserId: UserId,
                 classDetails: classDetails.id,
             }).then(() => {
                 window.location.reload();
@@ -23,6 +27,7 @@ firebase.auth().onAuthStateChanged((user) => {
             ExamDetails.set({
                 selectOption: selectOption,
                 yearInput: yearInput,
+                UserId: UserId,
                 ExamDetails: ExamDetails.id
             }).then(() => {
                 window.location.reload();

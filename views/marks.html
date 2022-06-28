@@ -80,13 +80,15 @@
 
                 <div class="smallOne">
                     <h6>Student's Performance</h6>
-                    <button class="btn btn-primary">Add marks</button>
+
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add marks</button>
                 </div>
                 <br>
                 <div class="tableUpper">
                     <table class="table table-dark  table-hover">
                         <thead>
                             <tr>
+                                <th scope="col">Position</th>
                                 <th scope="col">Full name</th>
                                 <th scope="col">English</th>
                                 <th scope="col">kiswahili</th>
@@ -94,10 +96,12 @@
                                 <th scope="col">Science</th>
                                 <th scope="col">Social studies</th>
                                 <th scope="col">Total marks</th>
-                                <th scope="col">Average Marks</th>
+                                <th scope="col"> Tutor</th>
+                                <th scope="col"> Date</th>
+
                             </tr>
                         </thead>
-                        <tbody id="expenseList">
+                        <tbody id="marksDisplay">
 
                         </tbody>
                     </table>
@@ -109,6 +113,38 @@
 
         </div>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Add Marks</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modalFull">
+                        <div class="pcard">
+                            <input id="Fname" class="form-control" type="text" placeholder="Name of the Student">
+                            <br>
+                            <input id="English" class="form-control" type="number" placeholder="Enter English Marks">
+                            <br>
+                            <input id="kiswahili" class="form-control" type="number" placeholder="Enter kiswahili Marks">
+                            <br>
+                            <input id="math" class="form-control" type="number" placeholder="Enter Mathematics Marks">
+                            <br>
+                            <input id="sci" class="form-control" type="number" placeholder="Enter Science Marks">
+                            <br>
+                            <input id="SSC" class="form-control" type="number" placeholder="Enter Social Studies & CRE Marks">
+
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex Modalbtn">
+                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                        <button type="button" id="addMarks" class="btn btn-primary">Add Marks</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
 
