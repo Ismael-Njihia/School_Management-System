@@ -83,6 +83,11 @@ a {
     background-color: gainsboro;
 }
 
+.rightSettings {
+    display: flex;
+    flex-direction: column;
+}
+
 .settings {
     margin-top: 5px;
     padding: 10px;
@@ -112,7 +117,8 @@ a {
     width: 300px;
     border-radius: 10px;
     background-color: gainsboro;
-    margin-right: 50px;
+    margin-left: 35px;
+    margin-right: 10px;
 }
 
 .card3 input,
@@ -139,11 +145,21 @@ select {
     margin-left: 10px;
 }
 
+.table3 {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
 
 /*Settings ended*/
 
 
 /*Home*/
+
+.rightHome {
+    display: flex;
+    flex-direction: column
+}
 
 .homeRight {
     display: flex;
@@ -156,6 +172,37 @@ select {
     height: 100px;
     width: 200px;
     border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#examDone {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#myChart {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.usersHomeAll {
+    border-top: 1px solid gainsboro;
+    padding-left: 10px;
+    padding-right: 90%;
+}
+
+.usersHomeAll h4 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+.usersHomeAll p {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 0;
+    font-style: italic;
 }
 
 .rectangle h3,

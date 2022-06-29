@@ -58,8 +58,9 @@ firebase.auth().onAuthStateChanged((user) => {
                     virtualStore.forEach((doc) => {
                         var studentsNo = doc.data().studentsNo;
                         console.log(studentsNo);
-
-                        if (position == studentsNo) {
+                        //calculate the mean score of the students
+                        let PUpgraded = position - 1;
+                        if (PUpgraded == studentsNo) {
                             firebase.firestore().collection("marks").get().then((virtualStore) => {
                                 let allTotal = 0;
                                 virtualStore.forEach((doc) => {
@@ -70,16 +71,23 @@ firebase.auth().onAuthStateChanged((user) => {
                                     let Mss = allTotal / studentsNo;
                                     console.log(allTotal)
                                     document.getElementById("mssInternal").innerText = "MSS" + " " + Mss;
+                                    document.getElementById("addMarks").disabled = true;
+                                    //Update the Mss to the Database
+                                    let MssDoc = firebase.firestore().collection("MSS").doc(UserId);
+                                    MssDoc.set({
+                                        UserId: UserId,
+                                        MssDoc: MssDoc.id,
+                                        Mss: Mss,
+                                    })
 
                                 })
                             })
-                        } else if (position > studentsNo) {
-                            document.getElementById("addMarks").disabled = true;
-                            alert("update the number of your students from the settings tab")
-                        } else if (position < studentsNo) {
+                        } else if (PUpgraded < studentsNo) {
+                            console.log(PUpgraded - studentsNo);
                             document.getElementById("mssInternal").style.display = "none";
                         }
                     })
+
 
 
                 })
@@ -108,10 +116,6 @@ firebase.auth().onAuthStateChanged((user) => {
                     content += '<td>' + tutor + '</td>'
                     content += '<td>' + date + '</td>'
                     content += '</tr>'
-
-
-
-
                 })
                 $("#marksDisplay").append(content);
             })

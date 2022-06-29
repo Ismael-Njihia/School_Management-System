@@ -25,7 +25,7 @@
 
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Keses Primary</a>
+                <a class="navbar-brand" href="#">Githambia Primary</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -70,7 +70,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link " href="/School_Management-System/views/settings.html"> <i class="bi bi-gear"></i> Settings
+                                <a class="nav-link" href="/School_Management-System/views/settings.html"> <i class="bi bi-gear"></i> Settings
                                 </a>
                             </li>
                         </ul>
@@ -78,11 +78,11 @@
                 </div>
 
                 <div class="users">
-                    <div id="allusers"></div>
+                    <div class="nav-link" id="allusers"></div>
                 </div>
 
             </div>
-            <div class="right">
+            <div class="rightHome">
                 <h5 id="examDone"></h5>
                 <div class="homeRight">
                     <div class="rectangle bg-success">
@@ -102,14 +102,19 @@
                     </div>
                     <div class="rectangle bg-light">
                         <h6>Mean Standard Score</h6>
-                        <h3 id="MSS">188.99</h3>
+                        <h3 id="MSS">0</h3>
 
                     </div>
                 </div>
+                <div class="graph">
+                    <canvas id="myChart"></canvas>
+                </div>
 
             </div>
+        </div>
 
         </div>
+
         </div>
 
 
@@ -122,6 +127,7 @@
 
     <script src="/School_Management-System/Js/config.js"></script>
     <script src="/School_Management-System/Js/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>
