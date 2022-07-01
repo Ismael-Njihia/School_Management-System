@@ -78,8 +78,20 @@
             </div>
             <div class="right">
 
+                <div class="search">
+                    <select class="form-select selectSubjects" id="selectSubjects" aria-label="Default select example">
+                        <option selected></option>
+                        <option>English</option>
+                        <option>kiswahili</option>
+                        <option>Mathemtatics</option>
+                        <option>Science</option>
+                        <option>Social/CRE</option>
+                      </select>
+                    <button class="btn btn-primary" id="OrderSubjects">Order</button>
+                </div>
+
                 <div class="smallOne">
-                    <h6>Student's Performance</h6>
+
                     <h5 id="mssInternal"></h5>
 
                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add marks</button>
@@ -103,6 +115,22 @@
                             </tr>
                         </thead>
                         <tbody id="marksDisplay">
+
+                        </tbody>
+
+                    </table>
+
+                    <table class="table table-dark  table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Position</th>
+                                <th scope="col">Full name</th>
+                                <th scope="col">English</th>
+
+                            </tr>
+                        </thead>
+
+                        <tbody id="SpecificSubjects">
 
                         </tbody>
                     </table>

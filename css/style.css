@@ -239,3 +239,18 @@ h6 {
 .modalFull {
     background-color: gainsboro;
 }
+
+.selectSubjects {
+    width: 20%;
+}
+
+.search {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.search button {
+    width: 10%;
+    overflow: hidden;
+}
